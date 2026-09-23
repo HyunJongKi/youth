@@ -23,19 +23,20 @@
 </div>
 <script>
 (function(){
-  var fb = "https://diamonds-assistance-pal-referrals.trycloudflare.com/wh/apply", q = location.search + location.hash;
-  function go(u){ try{ document.getElementById('go').href = u + q; }catch(e){} location.replace(u + q); }
+  var fb = "https://diamonds-assistance-pal-referrals.trycloudflare.com/wh/apply", q = location.search + location.hash;   // fb = 발행 시점 주소(폴백)
+  function go(u){ try{ document.getElementById('go').href = u; }catch(e){} location.replace(u); }
   try {
     var x = new XMLHttpRequest();
     x.open('GET', 'target.txt?t=' + Date.now(), true);
     x.timeout = 5000;
+    // target.txt 에는 기본 주소만 들어있으므로 신청 경로(/wh/apply)를 붙여야 한다
     x.onload = function(){
-      var u = (x.responseText || '').trim();
-      go(/^https:\/\//.test(u) ? u : fb);
+      var b = (x.responseText || '').trim();
+      go(/^https:\/\//.test(b) ? b.replace(/\/$/, '') + '/wh/apply' + q : fb + q);
     };
-    x.onerror = x.ontimeout = function(){ go(fb); };
+    x.onerror = x.ontimeout = function(){ go(fb + q); };
     x.send();
-  } catch(e) { go(fb); }
+  } catch(e) { go(fb + q); }
 })();
 </script>
 </body></html>
