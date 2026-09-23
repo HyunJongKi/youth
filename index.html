@@ -5,19 +5,37 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="농투스와 떠나는 2026년 복합형 농촌일손여행">
 <meta property="og:description" content="K-농산어촌 청년 워킹홀리데이 참가 청년 모집 · 단기 2박3일/중기 2주/장기 4주 · 익산 · 참가비 무료">
-<meta property="og:image" content="https://hyunjongki.github.io/youth/og_card.png">
+<meta property="og:image" content="https://hyunjongki.github.io/youth/card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:url" content="https://hyunjongki.github.io/youth/">
 <meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="refresh" content="0;url=https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply">
-<link rel="canonical" href="https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply">
+<meta http-equiv="refresh" content="6;url=https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply">
 <style>body{font-family:-apple-system,'Pretendard','Malgun Gothic',sans-serif;background:#eef7fb;
  display:flex;align-items:center;justify-content:center;height:100vh;margin:0;color:#0c4a6e}
- .b{text-align:center} .b img{width:120px} .b p{margin:12px 0 0;font-size:14px}
- .b a{color:#0f9ed5;font-weight:700}</style>
+ .b{text-align:center;padding:20px} .b img{width:110px} .b p{margin:12px 0 0;font-size:14px}
+ .b a{display:inline-block;margin-top:14px;background:#0f9ed5;color:#fff;text-decoration:none;
+       font-weight:700;padding:12px 22px;border-radius:12px;font-size:15px}</style>
 </head><body><div class="b">
 <img src="https://hyunjongki.github.io/youth/nongtus.png" alt="농투스">
-<p>🌾 복합형 농촌일손여행 참가신청으로 이동 중입니다…</p>
-<p><a href="https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply">바로 열기</a></p>
+<p>🌾 복합형 농촌일손여행 참가신청으로<br>이동 중입니다…</p>
+<p id="m" style="font-size:12.5px;color:#5b7c8d"></p>
+<a id="go" href="https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply">바로 열기</a>
 </div>
-<script>location.replace("https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply"+location.search+location.hash);</script>
+<script>
+(function(){
+  var fb = "https://nut-strengths-acm-candidate.trycloudflare.com/wh/apply", q = location.search + location.hash;
+  function go(u){ try{ document.getElementById('go').href = u + q; }catch(e){} location.replace(u + q); }
+  try {
+    var x = new XMLHttpRequest();
+    x.open('GET', 'target.txt?t=' + Date.now(), true);
+    x.timeout = 5000;
+    x.onload = function(){
+      var u = (x.responseText || '').trim();
+      go(/^https:\/\//.test(u) ? u : fb);
+    };
+    x.onerror = x.ontimeout = function(){ go(fb); };
+    x.send();
+  } catch(e) { go(fb); }
+})();
+</script>
 </body></html>
