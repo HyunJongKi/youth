@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>농투스와 떠나는 2026년 복합형 농촌일손여행 · 중기형 참가신청</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="농투스와 떠나는 2026년 복합형 농촌일손여행 · 중기형 참가신청">
+<meta property="og:description" content="중기형(10.6.~10.19. · 2주) 청년 참가자를 모집합니다 — 숙식·체험비 지원 · 익산">
+<meta property="og:image" content="https://hyunjongki.github.io/youth/card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://hyunjongki.github.io/youth/">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="refresh" content="6;url=https://exception-portfolio-latter-compact.trycloudflare.com/wh/enter?to=apply&t=MID&ch=qr_mid">
+<style>body{font-family:-apple-system,'Pretendard','Malgun Gothic',sans-serif;background:#eef7fb;
+ display:flex;align-items:center;justify-content:center;height:100vh;margin:0;color:#0c4a6e}
+ .b{text-align:center;padding:20px} .b img{width:110px} .b p{margin:12px 0 0;font-size:14px}
+ .b a{display:inline-block;margin-top:14px;background:#0f9ed5;color:#fff;text-decoration:none;
+       font-weight:700;padding:12px 22px;border-radius:12px;font-size:15px}</style>
+</head><body><div class="b">
+<img src="https://hyunjongki.github.io/youth/nongtus.png" alt="농투스">
+<p>🌾 복합형 농촌일손여행 참가신청으로<br>이동 중입니다…</p>
+<p id="m" style="font-size:12.5px;color:#5b7c8d"></p>
+<a id="go" href="https://exception-portfolio-latter-compact.trycloudflare.com/wh/enter?to=apply&t=MID&ch=qr_mid">바로 열기</a>
+</div>
+<script>
+(function(){
+  var fb = "https://exception-portfolio-latter-compact.trycloudflare.com/wh/enter?to=apply&t=MID&ch=qr_mid", q = location.search + location.hash;   // fb = 발행 시점 주소(폴백)
+  function go(u){ try{ document.getElementById('go').href = u; }catch(e){} location.replace(u); }
+  try {
+    var x = new XMLHttpRequest();
+    x.open('GET', '../target.txt?t=' + Date.now(), true);
+    x.timeout = 5000;
+    // target.txt 에는 기본 주소만 들어있으므로 진입 경로를 붙여야 한다.
+    // /wh/enter 를 거치면 세션이 복합형 전용 모드로 고정된다(일반형 화면 미노출).
+    x.onload = function(){
+      var b = (x.responseText || '').trim();
+      var tail = '/wh/enter?to=apply&t=MID' + (q ? '&' + q.replace(/^\?/, '') : '');
+      go(/^https:\/\//.test(b) ? b.replace(/\/$/, '') + tail : fb + q);
+    };
+    x.onerror = x.ontimeout = function(){ go(fb + q); };
+    x.send();
+  } catch(e) { go(fb + q); }
+})();
+</script>
+</body></html>
