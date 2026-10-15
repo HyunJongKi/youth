@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="format-detection" content="telephone=no">
+<title>중기형 단톡방 · 복합형 농촌일손여행</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="복합형 농촌일손여행 중기형 단톡방 — 공지·일정·연락처">
+<meta property="og:description" content="10.20.(화) ~ 11.2.(월) · 2주 · 익산 다송무지개매화마을 · 참가자·운영진 공유 페이지">
+<meta property="og:image" content="https://hyunjongki.github.io/youth/card_v2.png">
+<meta property="og:url" content="https://hyunjongki.github.io/youth/room/mid/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f2f6f3;color:#1d2a22;word-break:keep-all;overflow-wrap:break-word;
+     font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif}
+.w{max-width:720px;margin:0 auto;padding:14px 14px calc(30px + env(safe-area-inset-bottom))}
+.hd{background:linear-gradient(110deg,#0c5a27,#1c8a3c 60%,#0f9ed5);color:#fff;border-radius:18px;padding:18px}
+.hd .s{font-size:12.5px;font-weight:700;opacity:.9}
+.hd h1{margin:4px 0 0;font-size:21px;line-height:1.35}
+.hd .m{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.hd .m span{background:rgba(255,255,255,.18);border-radius:20px;padding:5px 11px;font-size:12.5px;font-weight:700}
+.c{background:#fff;border-radius:16px;padding:15px 16px;margin-top:12px;border:1px solid #e3ebe5}
+.c h2{margin:0 0 9px;font-size:16px;color:#0c5a27}
+.nt{border-left:4px solid #1c8a3c;padding:9px 11px;background:#f7fbf8;border-radius:10px;margin-top:8px}
+.nt.pin{border-left-color:#e0a800;background:#fffaeb}
+.nt b{font-size:14.5px}.nt .d{font-size:12px;color:#6a776f;margin-top:2px}
+.nt .bd{font-size:14px;line-height:1.7;margin-top:6px;white-space:pre-wrap}
+.ac{display:flex;gap:9px;padding:8px 0;border-bottom:1px dashed #e3ebe5;font-size:14px;line-height:1.6}
+.ac:last-child{border-bottom:0}
+.ac .k{flex:none;width:96px;font-weight:800;color:#1c8a3c;font-size:13px}
+.wk h3{margin:12px 0 4px;font-size:14.5px;color:#0c5a27}.wk h3 small{color:#6a776f;font-weight:600}
+.lk a,.lk div{display:block;text-decoration:none;color:#1d2a22;border:1px solid #e3ebe5;border-radius:12px;padding:11px 12px;margin-top:7px;font-size:14px;font-weight:700}
+.lk small{display:block;font-weight:500;color:#6a776f;margin-top:2px;font-size:12px}
+.ct a{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;color:#1d2a22;border:1px solid #e3ebe5;border-radius:12px;padding:11px 12px;margin-top:7px;font-size:14px}
+.ct a b{color:#0c5a27;white-space:nowrap}
+.sf li{font-size:14px;line-height:1.7;margin-top:3px}
+.none{color:#8a978f;font-size:13.5px}
+.st{margin-top:14px;text-align:center;font-size:11.5px;color:#7b8a81;line-height:1.7}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c9770a;margin-right:4px;vertical-align:1px}
+.dot.on{background:#1c8a3c}
+</style></head><body><div class="w">
+<div class="hd">
+  <div class="s">🌾 2026 복합형 농촌일손여행 · 참가자·운영진 공유</div>
+  <h1>중기형 단톡방 페이지</h1>
+  <div class="m"><span id="phase">-</span><span id="period">10.20.(화) ~ 11.2.(월) · 2주</span><span>📍 익산 다송무지개매화마을</span></div>
+</div>
+<div class="c"><h2>📢 공지</h2><div id="notices"><div class="none">불러오는 중…</div></div></div>
+<div class="c"><h2>📅 오늘 일정 <small id="today" style="color:#6a776f;font-size:12.5px"></small></h2><div id="acts"></div>
+  <div id="tmr"></div></div>
+<div class="c wk"><h2>🗓 주차별 프로그램</h2><div id="weeks"></div></div>
+<div class="c lk"><h2>🔗 바로가기</h2><div id="links"></div></div>
+<div class="c ct"><h2>📞 연락처 <small style="color:#6a776f;font-size:12px;font-weight:500">— 누르면 전화가 걸립니다</small></h2><div id="contacts"></div></div>
+<div class="c sf"><h2>🦺 안전 수칙</h2><ul id="safety" style="margin:0;padding-left:18px"></ul></div>
+<div class="st"><span class="dot" id="dot"></span><span id="upd">저장본</span><br>
+  개인정보(성명·연락처)는 이 페이지에 싣지 않습니다 · 총괄운영기관 아이엔케이(주)</div>
+</div>
+<script type="application/json" id="snap">{"code": "MID", "label": "중기형", "weeks": 2, "period": "10.20.(화) ~ 11.2.(월) · 2주", "lodging": "다송무지개매화마을", "place": "전북특별자치도 익산시 일원", "phase": "입소 D-5", "today": "10.15.(목)", "today_acts": [], "tomorrow_acts": [], "notices": [], "weeks_plan": [{"no": "1주차", "date": "10.20.(화) ~ 10.26.(월)", "theme": "익산의 리듬에 들어가기", "rows": [["입소일 10.20.", "익산역 집결 → 오리엔테이션(안내·성인지 교육) → 재능 미션 부여 → 중식 → 장보기 → 고스락 견학 → 고구마 수확·빵 만들기"], ["평일 오전", "농업현장 실습(4시간) — 쌈채소 제초(하우스), 딸기 육묘장 보수(스마트팜) / 분홍염소농장 동물교감 프로그램 운영지원"], ["평일 오후", "농가 중식 → 개인정비 → 주 1회 특별활동(교도소세트장·천연염색·아가페정원·육회비빔밥·석산 전망대) → 장보기"], ["야간·주말", "공유주방 소셜다이닝 / 주 2회 청년농부 멘토링·진로찾기 / 주말 익산문화마한대전"]]}, {"no": "2주차", "date": "10.27.(화) ~ 11.2.(월)", "theme": "몰입하고 결과 나누기", "rows": [["평일 오전", "농업현장 실습(4시간) — 옥수수·들깨 수확·철거(노지), 딸기 보식(스마트팜) / 사회적농장 연화산방 운영지원"], ["평일 오후", "주 1회 특별활동(백제문화체험·국립익산박물관·미륵사지·구룡마을 대나무숲·캠프파이어) → 장보기"], ["야간·주말", "주 2회 멘토링·진로찾기 · 청년농부 토크콘서트 / 주말 뚜벅이 여행(자율)"], ["퇴소일 11.2.", "마을 정화활동·탐방(바람개비열차·용안생태습지) → 중식 → 해단식·수료식(미션 실적 공유·포상, 만족도조사) → 복귀"]]}], "safety": ["농작업은 하루 4시간 이내 · 약정한 작업만, 야간·위험 작업은 하지 않습니다.", "농기계 근처에 가지 않고, 작업 중 이상하면 바로 코디네이터에게 알려 주세요.", "숙소 생활수칙(소등·외출·음주)을 지키고, 외출·이탈 시 미리 알려 주세요.", "주민·농가를 촬영할 때는 먼저 동의를 받아 주세요."], "contacts": [["액션조직 · 익산시청년농촌활동가네트워크", "010-4849-9906"], ["총괄운영기관 · 아이엔케이(주)", "010-9039-8194"], ["긴급 — 화재·구급", "119"], ["긴급 — 경찰", "112"]], "links": [["📱 내 활동 페이지(출석·일기)", "", "문자로 받은 본인 전용 링크를 열어 주세요"], ["📺 방송 촬영 동의서", "", "메일로 받은 본인 전용 링크에서 10.19.까지 작성"], ["📎 포스터·참가안내 매거진", "https://hyunjongki.github.io/youth/kit/", ""]], "updated": "2026-10-15 10:26"}</script>
+<script>
+(function(){
+  function el(id){ return document.getElementById(id); }
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function render(d, live){
+    el('phase').textContent = d.phase || '-';
+    el('today').textContent = d.today || '';
+    var n = d.notices || [];
+    el('notices').innerHTML = n.length ? n.map(function(x){
+      return '<div class="nt' + (x.pinned ? ' pin' : '') + '"><b>' + (x.pinned ? '📌 ' : '') + esc(x.title) + '</b>'
+           + '<div class="d">' + esc(x.at) + (x.author ? ' · ' + esc(x.author) : '') + '</div>'
+           + (x.body ? '<div class="bd">' + esc(x.body) + '</div>' : '') + '</div>';
+    }).join('') : '<div class="none">아직 등록된 공지가 없습니다.</div>';
+    function acts(a){ return a.map(function(x){ return '<div class="ac"><div class="k">' + esc(x.slot) + '</div><div>' + esc(x.title)
+                      + (x.place ? ' <span style="color:#6a776f">· ' + esc(x.place) + '</span>' : '') + '</div></div>'; }).join(''); }
+    el('acts').innerHTML = (d.today_acts || []).length ? acts(d.today_acts) : '<div class="none">오늘 등록된 활동이 없습니다. 아래 주차별 프로그램을 참고하세요.</div>';
+    el('tmr').innerHTML = (d.tomorrow_acts || []).length ? '<div style="margin-top:8px;font-weight:800;font-size:13px;color:#0c5a27">내일</div>' + acts(d.tomorrow_acts) : '';
+    el('weeks').innerHTML = (d.weeks_plan || []).map(function(w){
+      return '<h3>' + esc(w.no) + ' <small>' + esc(w.date) + ' · ' + esc(w.theme) + '</small></h3>'
+           + w.rows.map(function(r){ return '<div class="ac"><div class="k">' + esc(r[0]) + '</div><div>' + esc(r[1]) + '</div></div>'; }).join('');
+    }).join('');
+    el('links').innerHTML = (d.links || []).map(function(l){
+      var inner = esc(l[0]) + (l[2] ? '<small>' + esc(l[2]) + '</small>' : '');
+      return l[1] ? '<a href="' + esc(l[1]) + '">' + inner + '</a>' : '<div>' + inner + '</div>';
+    }).join('');
+    el('contacts').innerHTML = (d.contacts || []).map(function(c){
+      return '<a href="tel:' + esc(String(c[1]).replace(/[^0-9]/g, '')) + '"><span>' + esc(c[0]) + '</span><b>' + esc(c[1]) + '</b></a>';
+    }).join('');
+    el('safety').innerHTML = (d.safety || []).map(function(s){ return '<li>' + esc(s) + '</li>'; }).join('');
+    el('dot').className = 'dot' + (live ? ' on' : '');
+    el('upd').textContent = (live ? '실시간 · ' : '저장본 · ') + '갱신 ' + (d.updated || '');
+  }
+  function get(url, ms, ok, bad){
+    try {
+      var x = new XMLHttpRequest(); x.open('GET', url, true); x.timeout = ms;
+      x.onload = function(){ if (x.status >= 200 && x.status < 300) { try { ok(JSON.parse(x.responseText)); return; } catch(e){} } bad(); };
+      x.onerror = x.ontimeout = bad; x.send();
+    } catch(e) { bad(); }
+  }
+  var snap = null;
+  try { snap = JSON.parse(document.getElementById('snap').textContent); render(snap, false); } catch(e){}
+  // 저장본 최신화(정적 data.json) → 서버 실시간(target.txt → /wh/room/MID.json)
+  get('data.json?t=' + Date.now(), 5000, function(d){ snap = d; render(d, false); live(); }, live);
+  function live(){
+    try {
+      var x = new XMLHttpRequest(); x.open('GET', '../../target.txt?t=' + Date.now(), true); x.timeout = 5000;
+      x.onload = function(){
+        var b = (x.responseText || '').trim().replace(/\/$/, '');
+        if (!/^https:\/\//.test(b)) return;
+        get(b + '/wh/room/MID.json?t=' + Date.now(), 4000, function(d){ render(d, true); }, function(){});
+      };
+      x.send();
+    } catch(e){}
+  }
+})();
+</script>
+</body></html>
