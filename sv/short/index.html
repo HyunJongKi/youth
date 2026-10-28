@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>단기형 설문 · 복합형 농촌일손여행</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="복합형 농촌일손여행 단기형 설문 — 3분이면 끝나요">
+<meta property="og:description" content="성명·휴대폰 뒤 4자리로 본인 확인 후 응답 · 응답은 성과관리 목적으로만 사용">
+<meta property="og:image" content="https://hyunjongki.github.io/youth/card_v2.png">
+<style>body{margin:0;font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f2f6f3;color:#1d2a22;
+display:grid;place-items:center;min-height:100vh;text-align:center;padding:20px}a{color:#1c8a3c;font-weight:800}</style>
+</head><body><div><div style="font-size:40px">📝</div><p id="m">설문으로 이동 중입니다…</p></div>
+<script>
+(function(){
+  var k = new URLSearchParams(location.search).get('k') || 'participant';
+  if (!/^(pre|participant|post)$/.test(k)) k = 'participant';
+  function fail(){ document.getElementById('m').innerHTML = '지금은 설문 서버에 연결할 수 없습니다.<br>잠시 뒤 다시 열어 주세요.'; }
+  try {
+    var x = new XMLHttpRequest(); x.open('GET', '../../target.txt?t=' + Date.now(), true); x.timeout = 6000;
+    x.onload = function(){ var b = (x.responseText || '').trim().replace(/\/$/, '');
+      if (/^https:\/\//.test(b)) location.replace(b + '/wh/svs/SHORT/' + k); else fail(); };
+    x.onerror = x.ontimeout = fail; x.send();
+  } catch(e) { fail(); }
+})();
+</script></body></html>
