@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script>
 (function(){
-  var m = location.pathname.match(/\/sv\/(short|mid|long)\/?(pre|participant|post)?/);
+  var m = location.pathname.match(/\/(?:sv|survey)\/(short|mid|long)\/?(pre|participant|post)?/);
   if (!m) return;
   window.__SV = 1;
   var k = m[2] || new URLSearchParams(location.search).get('k') || 'participant';
