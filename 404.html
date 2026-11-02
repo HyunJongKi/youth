@@ -7,9 +7,24 @@
 <meta property="og:description" content="K-농산어촌 청년 워킹홀리데이 · 중기형(2주) 10.16.(금)·장기형(4주) 10.28.(수) 18:00 마감 · 익산 · 참가비 무료">
 <meta property="og:image" content="https://hyunjongki.github.io/youth/card_v2.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:url" content="https://hyunjongki.github.io/youth/">
 <meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="refresh" content="6;url=https://autumn-pointing-acm-ghz.trycloudflare.com/wh/enter?to=apply">
+<script>
+(function(){
+  var m = location.pathname.match(/\/sv\/(short|mid|long)\/?(pre|participant|post)?/);
+  if (!m) return;
+  window.__SV = 1;
+  var k = m[2] || new URLSearchParams(location.search).get('k') || 'participant';
+  if (!/^(pre|participant|post)$/.test(k)) k = 'participant';
+  document.addEventListener('DOMContentLoaded', function(){
+    var p = document.querySelector('.b p'); if (p) p.innerHTML = '📝 설문으로 이동 중입니다…';
+    var g = document.getElementById('go'); if (g) g.style.display = 'none';
+  });
+  var x = new XMLHttpRequest(); x.open('GET', '/youth/target.txt?t=' + Date.now(), true); x.timeout = 6000;
+  x.onload = function(){ var b = (x.responseText || '').trim().replace(/\/$/, '');
+    if (/^https:\/\//.test(b)) location.replace(b + '/wh/svs/' + m[1].toUpperCase() + '/' + k); };
+  x.send();
+})();
+</script>
 <style>body{font-family:-apple-system,'Pretendard','Malgun Gothic',sans-serif;background:#eef7fb;
  display:flex;align-items:center;justify-content:center;height:100vh;margin:0;color:#0c4a6e}
  .b{text-align:center;padding:20px} .b img{width:110px} .b p{margin:12px 0 0;font-size:14px}
@@ -23,6 +38,7 @@
 </div>
 <script>
 (function(){
+  if (window.__SV) return;                    // 404 — 설문 경로는 위에서 처리
   var fb = "https://autumn-pointing-acm-ghz.trycloudflare.com/wh/enter?to=apply", q = location.search;   // fb = 발행 시점 주소(폴백)
   // 원래 출처(링커리어·인스타 등)를 넘긴다 — 관문을 거치면 referrer 가 관문 주소로 바뀌어 출처가 사라지기 때문.
   // 경로·검색어는 빼고 도메인 수준만 쓰도록 서버에서 다시 자른다.

@@ -23,6 +23,7 @@
 </div>
 <script>
 (function(){
+  if (window.__SV) return;                    // 404 — 설문 경로는 위에서 처리
   var fb = "https://autumn-pointing-acm-ghz.trycloudflare.com/wh/enter?to=apply", q = location.search;   // fb = 발행 시점 주소(폴백)
   // 원래 출처(링커리어·인스타 등)를 넘긴다 — 관문을 거치면 referrer 가 관문 주소로 바뀌어 출처가 사라지기 때문.
   // 경로·검색어는 빼고 도메인 수준만 쓰도록 서버에서 다시 자른다.
